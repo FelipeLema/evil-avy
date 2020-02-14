@@ -3,9 +3,10 @@
 ;; Copyright (C) 2015  Free Software Foundation, Inc.
 
 ;; Author: Yufan Lou <loganlyf@gmail.com>
-;; URL: https://github.com/louy2/evil-avy
-;; Version: 0.1.0
-;; Package-Requires: ((emacs "24.1") (cl-lib "0.5") (avy "0.3.0") (evil "1.2.3"))
+;; Maintainer: Felipe Lema <felipelema@mortemale.org>
+;; URL: https://github.com/FelipeLema/evil-avy
+;; Version: 0.1.1
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.5") (avy "0.5.0") (evil "1.13.0"))
 ;; Keywords: point, location, evil, vim
 
 ;; This file is part of GNU Emacs.
