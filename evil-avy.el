@@ -38,7 +38,7 @@ If BACK is t, jump backward."
 
   (let ((avy-all-windows nil))
     (avy-with avy-goto-char
-      (avy--process
+      (avy-process
        (save-restriction
          (if (null back)
              (narrow-to-region (point)
