@@ -48,7 +48,8 @@ If BACK is t, jump backward."
                              (point))
            )
          (avy--regex-candidates (regexp-quote (string char))))
-       (avy--style-fn avy-style)))))
+       (avy--style-fn avy-style)))
+    nil))
 
 (evil-define-motion evil-avy-find-char (count char)
   "Use avy to move forward to char in line."
