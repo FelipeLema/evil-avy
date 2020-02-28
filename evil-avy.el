@@ -42,11 +42,10 @@ If BACK is t, jump backward."
       (avy-process
        (save-restriction
          (if (null back)
-             (narrow-to-region (point)
+             (narrow-to-region (+ 1 (point))
                                (line-end-position))
            (narrow-to-region (line-beginning-position)
-                             (point))
-           )
+                             (point)))
          (avy--regex-candidates (regexp-quote (string char))))
        (avy--style-fn avy-style)))
     nil))
