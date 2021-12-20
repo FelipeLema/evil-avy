@@ -66,12 +66,17 @@ If BACK is t, jump backward."
     (avy-with avy-forward-char-in-window
       (avy-process
        (save-restriction
-         (if (null back)
-             (narrow-to-region (+ 1 (point))
-                               (window-end))
-           (narrow-to-region (window-start)
-                             (point)))
-         (avy--regex-candidates (regexp-quote (string char))))
+         (let ((candidates
+                (avy--regex-candidates (regexp-quote (string char))
+                                (if (null back)
+                                    (+ 1 (point))
+                                  (window-start))
+                                (if (null back)
+                                    (window-end)
+                                  (point)))))
+           (if (null back)
+               candidates
+             (reverse candidates))))
        (avy--style-fn avy-style)))
     nil))
 
