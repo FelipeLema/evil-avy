@@ -69,12 +69,12 @@ If BACK is t, jump backward."
        (save-restriction
          (let ((candidates
                 (avy--regex-candidates (regexp-quote (string char))
-                                (if (null back)
-                                    (+ 1 (point))
-                                  (window-start))
-                                (if (null back)
-                                    (window-end)
-                                  (point)))))
+                                       (if (null back)
+                                           (+ 1 (point))
+                                         (window-start))
+                                       (if (null back)
+                                           (window-end)
+                                         (point)))))
            (if (null back)
                candidates
              (reverse candidates))))
