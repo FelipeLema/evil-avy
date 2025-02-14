@@ -37,7 +37,8 @@
   "Simulate hop.nvim's behaviour and move to begin/end of window.
 
 Instead of listing candidates until begin/end of line, list them up to begin/end
-of window")
+of window"
+  :type boolean)
 
 (defun avy-forward-char-in-line (char &optional back)
   "Jump forward to the currently visible CHAR in the current line.
