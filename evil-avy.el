@@ -91,7 +91,7 @@ If BACK is t, jump backward."
     (evil-find-char count char)))
 
 (evil-define-motion evil-avy-find-char-in-line-to (count char)
-  "Use avy to move till char in line"
+  "Use avy to move till char in line."
   :jump t
   :type inclusive
   (interactive "<c><C>")
@@ -131,7 +131,7 @@ If BACK is t, jump backward."
     (evil-find-char count char)))
 
 (evil-define-motion evil-avy-find-char-in-window-to (count char)
-  "Use avy to move till char in line"
+  "Use avy to move till char in line."
   :jump t
   :type inclusive
   (interactive "<c><C>")
@@ -164,14 +164,14 @@ If BACK is t, jump backward."
 ;;; minor mode
 ;;;###autoload
 (define-minor-mode evil-avy-mode
-  "Toggle evil-avy-mode.
+  "Toggle `evil-avy-mode'.
 
-Interactively with no argument, this command toggles the mode. A
+Interactively with no argument, this command toggles the mode.  A
 positive prefix argument enables the mode, any other prefix
 argument disables it.  From Lisp, argument omitted or nil enables
 the mode,`toggle' toggles the state.
 
-When evil-avy-mode is active, it replaces some the normal, visual, operator
+When `evil-avy-mode' is active, it replaces some the normal, visual, operator
 and motion state keybindings to invoke avy commands."
   :lighter nil
   :keymap (make-sparse-keymap)
